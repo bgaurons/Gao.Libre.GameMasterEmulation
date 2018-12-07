@@ -9,9 +9,6 @@ namespace Gao.Libre.GameMasterEmulation.Model
     /// </summary>
     public enum CultureType
     {
-        /// <summary>
-        /// 1-3
-        /// </summary>
         [RepeatElement(2,3)]
         MajorityNative = 1,
         NativeMinority = 4,
