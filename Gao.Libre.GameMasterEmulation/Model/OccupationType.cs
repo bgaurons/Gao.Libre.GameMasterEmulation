@@ -9,9 +9,6 @@ namespace Gao.Libre.GameMasterEmulation.Model
     /// </summary>
     public enum OccupationType
     {
-        /// <summary>
-        /// 1-2
-        /// </summary>
         [RepeatElement(2)]
         Common = 1,
         SocialLeadership = 3,
