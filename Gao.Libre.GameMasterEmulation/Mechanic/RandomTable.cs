@@ -3,9 +3,8 @@ using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
-using System.Text;
-using Gao.Libre.GameMasterEmulation.Common;
 using System.Reflection;
+using rng = Gao.Libre.GameMasterEmulation.Common.RandomNumberGeneration;
 
 namespace Gao.Libre.GameMasterEmulation.Mechanic
 {
@@ -59,7 +58,7 @@ namespace Gao.Libre.GameMasterEmulation.Mechanic
         /// values multiple times, so using the dictionary means we can have duplicate entries.</remarks>
         public static TEnum GetRandomValue<TEnum>(Dictionary<int, TEnum> dictionary) where TEnum : struct, IConvertible
         {
-            var index = Dice.NextFunction(1, dictionary.Count+1);
+            var index = rng.NextFunction(1, dictionary.Count+1);
             return dictionary[index];
         }
 
