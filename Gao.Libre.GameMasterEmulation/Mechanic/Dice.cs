@@ -7,7 +7,32 @@ namespace Gao.Libre.GameMasterEmulation.Mechanic
 {
     public static class Dice
     {
-        public static Random NumberGenerator { get; set; } = new Random();
+        /// <summary>
+        /// The commonly used random number function.
+        /// </summary>
+        private static Random NumberGenerator { get; } = new Random();
+
+        private static int Next(int minValue, int maxValue)
+        {
+            return NumberGenerator.Next(minValue, maxValue);
+        }
+
+        private static Func<int, int, int> _nextFunction = null;
+        /// <summary>
+        /// A function to get a number from min inclusive to max exclusive.
+        /// </summary>
+        /// <remarks>Done for DI</remarks>
+        public static Func<int, int, int> NextFunction
+        {
+            get
+            {
+                return _nextFunction ?? (_nextFunction = Next);
+            }
+            set
+            {
+                _nextFunction = value;
+            }
+        }
 
         /// <summary>
         /// Rolls the standard number of dice with the given number of sides.
@@ -30,7 +55,7 @@ namespace Gao.Libre.GameMasterEmulation.Mechanic
         {
             return
                 Enumerable.Range(0, quantity).
-                Select(d => sides[NumberGenerator.Next(0, sides.Length)]).
+                Select(d => sides[NextFunction(0, sides.Length)]).
                 ToArray();
         }
 

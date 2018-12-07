@@ -59,7 +59,7 @@ namespace Gao.Libre.GameMasterEmulation.Mechanic
         /// values multiple times, so using the dictionary means we can have duplicate entries.</remarks>
         public static TEnum GetRandomValue<TEnum>(Dictionary<int, TEnum> dictionary) where TEnum : struct, IConvertible
         {
-            var index = Dice.NumberGenerator.Next(1, dictionary.Count+1);
+            var index = Dice.NextFunction(1, dictionary.Count+1);
             return dictionary[index];
         }
 
