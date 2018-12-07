@@ -15,7 +15,7 @@ namespace Gao.Libre.GameMasterEmulation.Mechanic
         /// <returns>the result of each die roll</returns>
         public static int[] Roll(int quantity, int sides)
         {
-            return Roll(quantity, Enumerable.Range(1, sides - 1).ToArray());
+            return Roll(quantity, Enumerable.Range(1, sides).ToArray());
         }
         
         /// <summary>

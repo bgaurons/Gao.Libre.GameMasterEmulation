@@ -16,8 +16,4 @@
     <ProjectReference Include="..\Gao.Libre.GameMasterEmulation\Gao.Libre.GameMasterEmulation.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="GameMasterEmulation\Mechanic\" />
-  </ItemGroup>
-
 </Project>

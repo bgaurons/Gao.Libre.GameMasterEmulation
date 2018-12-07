@@ -91,15 +91,8 @@ namespace Gao.Libre.GameMasterEmulation.Mechanic
                     Where(kvp => kvp.Key > 80).
                     ToDictionary(kvp => kvp.Key - 80, kvp => kvp.Value));
 
-        private static Dictionary<int, LocationAndQualityType> LocationAndQualityTable
-        {
-            get
-            {
-                var lookupTable = EnumToDictionary<LocationAndQualityType>();
+        private static Dictionary<int, LocationAndQualityType> LocationAndQualityTable => EnumToDictionary<LocationAndQualityType>();
 
-                return lookupTable;
-            }
-        }
 
         private static Dictionary<int, LocationAndQualityType> CivilizedQualityTypeLookupTable => 
             LocationAndQualityTable.
@@ -131,35 +124,15 @@ namespace Gao.Libre.GameMasterEmulation.Mechanic
 
         public static ItemType Item => GetRandomValue(ItemLookupTable);
 
-        public static Dictionary<int, ItemType> ItemLookupTable
-        {
-            get
-            {
-                var lookupTable = EnumToDictionary<ItemType>();
-                return lookupTable;
-            }
-        }
+        public static Dictionary<int, ItemType> ItemLookupTable => EnumToDictionary<ItemType>();
 
         public static CultureType CultureType => GetRandomValue(CultureTypeLookupTable);
 
-        private static Dictionary<int, CultureType> CultureTypeLookupTable
-        {
-            get
-            {
-                var lookupTable = EnumToDictionary<CultureType>();
-                return lookupTable;
-            }
-        }
+        private static Dictionary<int, CultureType> CultureTypeLookupTable => EnumToDictionary<CultureType>();
 
         public static OccupationType OccupationType => GetRandomValue(OccupationTypeLookupTable);
 
-        private static Dictionary<int, OccupationType> OccupationTypeLookupTable
-        {
-            get
-            {
-                var lookupTable = EnumToDictionary<OccupationType>();
-                return lookupTable;
-            }
-        }
+        private static Dictionary<int, OccupationType> OccupationTypeLookupTable => EnumToDictionary<OccupationType>();
+
     }
 }
