@@ -4,7 +4,7 @@ using System.Text;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
-namespace Gao.Web.Data
+namespace Gao.Database
 {
     public class ApplicationDbContext : IdentityDbContext
     {
