@@ -21,9 +21,12 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Gao.Database\Gao.Database.csproj" />
+    <ProjectReference Include="..\Gao.Libre.GameMasterEmulation\Gao.Libre.GameMasterEmulation.csproj" />
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Areas\GameMasterEmulator\Data\" />
+    <Folder Include="Areas\GameMasterEmulator\Models\" />
     <Folder Include="Areas\Identity\Services\" />
   </ItemGroup>
 
