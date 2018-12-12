@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="Gao.Libre.GameMasterEmulation.Model.FocusSuggestion">
+    <Position X="5" Y="2.5" Width="1.5" />
+    <AssociationLine Name="Item" Type="Gao.Libre.GameMasterEmulation.Model.ItemType" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="6.188" Y="2.5" />
+        <Point X="6.188" Y="1.687" />
+        <Point X="7.219" Y="1.687" />
+        <Point X="7.219" Y="1.312" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAGAAAAAAAEAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\FocusSuggestion.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="CivilizedLocation" />
+      <Property Name="Item" />
+      <Property Name="Person" />
+      <Property Name="WildernessLocation" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Gao.Libre.GameMasterEmulation.Model.Foe">
+    <Position X="9.75" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAAAAAAAEAAAAAgAAAQAAAAAAAQAAgAAAAAA=</HashCode>
+      <FileName>Model\Foe.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Occupation" />
+      <Property Name="Culture" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Gao.Libre.GameMasterEmulation.Model.Mission">
+    <Position X="4" Y="5.25" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAEgAAAAAAAAAAAiAAAIQAACAAAAAA=</HashCode>
+      <FileName>Model\Mission.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Purpose" />
+      <Property Name="Suggestions" />
+      <Property Name="Type" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="AlliesGroups" />
+      <Property Name="PatronsPersons" />
+      <Property Name="Scenes" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Gao.Libre.GameMasterEmulation.Model.Person">
+    <Position X="9.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAAAEAAAAAAAAAAAAACAAAQAAAAAAAAA=</HashCode>
+      <FileName>Model\Person.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="FoeDetails" />
+      <Property Name="Personality" />
+      <Property Name="Type" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Gao.Libre.GameMasterEmulation.Model.Scene">
+    <Position X="1" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Model\Scene.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Type" />
+    </ShowAsAssociation>
+  </Class>
+  <Enum Name="Gao.Libre.GameMasterEmulation.Model.CultureType" Collapsed="true">
+    <Position X="9.75" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAABAAAAAAAAAAAAAAAAAAAAAQABAAAAAAgAAAAAQ=</HashCode>
+      <FileName>Model\CultureType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Gao.Libre.GameMasterEmulation.Model.ItemType" Collapsed="true">
+    <Position X="7" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>LQV2qhBSCmYCjzSFUocBAQADwAAKIFIC4lQigJQWuAs=</HashCode>
+      <FileName>Model\ItemType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Gao.Libre.GameMasterEmulation.Model.LocationAndQualityType" Collapsed="true">
+    <Position X="4" Y="0.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>jNbQQc1CMOua8Uuswp+xbykSpdgcMpebJ/ww+5DLYu4=</HashCode>
+      <FileName>Model\LocationAndQualityType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Gao.Libre.GameMasterEmulation.Model.MissionType" Collapsed="true">
+    <Position X="4" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIQAAAIAAAAIAAAAAAAhAAIAEBAIADBABQAAAwIg=</HashCode>
+      <FileName>Model\MissionType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Gao.Libre.GameMasterEmulation.Model.OccupationType" Collapsed="true">
+    <Position X="12.75" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAQAEAgAQAAABAAAAAAAACAAACAAAACAAAAA=</HashCode>
+      <FileName>Model\OccupationType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Gao.Libre.GameMasterEmulation.Model.PersonType" Collapsed="true">
+    <Position X="12.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ATKElJILUKAOCgQUlIYgDZV4GIAR0MBlFTxvTAQAIgg=</HashCode>
+      <FileName>Model\PersonType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Gao.Libre.GameMasterEmulation.Model.SceneType" Collapsed="true">
+    <Position X="1" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAAAAAAAAAAAAAAAAAEAgAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\SceneType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Gao.Libre.GameMasterEmulation.Model.Trait" Collapsed="true">
+    <Position X="11.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAEABAAASAAAEAABOAAAQEBADAQICQAA=</HashCode>
+      <FileName>Model\Trait.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
