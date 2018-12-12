@@ -1,11 +1,7 @@
 ﻿using Gao.Libre.GameMasterEmulation.Common;
 using Gao.Libre.GameMasterEmulation.Mechanic;
-using Gao.Libre.GameMasterEmulation.Model;
 using Gao.Model.Libre;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace UnitTest.Gao.Libre.GameMasterEmulation.Mechanic
 {

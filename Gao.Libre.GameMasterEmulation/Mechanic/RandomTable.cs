@@ -1,4 +1,4 @@
-﻿using Gao.Libre.GameMasterEmulation.Model;
+﻿using Gao.Model.Common;
 using Gao.Model.Libre;
 using System;
 using System.Collections.Generic;

@@ -9,6 +9,7 @@ namespace Gao.Model.Libre
     /// </summary>
     public class Mission
     {
+        public long Id { get; set; }
         public MissionType Type { get; set; }
 
         public FocusSuggestion Suggestions { get; set; }

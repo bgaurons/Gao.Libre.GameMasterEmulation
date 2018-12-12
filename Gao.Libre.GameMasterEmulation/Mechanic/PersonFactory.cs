@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Linq;
-using Gao.Libre.GameMasterEmulation.Model;
 using Gao.Model.Libre;
 
 namespace Gao.Libre.GameMasterEmulation.Mechanic
