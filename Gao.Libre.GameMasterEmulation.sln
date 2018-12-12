@@ -9,9 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gao.Libre.Sandbox", "Gao.Li
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTest.Gao.Libre", "UnitTest.Gao.Libre\UnitTest.Gao.Libre.csproj", "{1AD0AA14-D56F-4E23-8191-8406D1E9CA27}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gao.Web", "Gao.Web\Gao.Web.csproj", "{A1795E6B-5028-4232-85B7-7C8C1FF82244}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gao.Web", "Gao.Web\Gao.Web.csproj", "{A1795E6B-5028-4232-85B7-7C8C1FF82244}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gao.Database", "Gao.Database\Gao.Database.csproj", "{67B6AA62-F95B-4AC3-9600-671309A91F42}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gao.Database", "Gao.Database\Gao.Database.csproj", "{67B6AA62-F95B-4AC3-9600-671309A91F42}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gao.Model", "Gao.Model\Gao.Model.csproj", "{7FA89172-4A25-486D-B116-D0AACCD1AEB9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{67B6AA62-F95B-4AC3-9600-671309A91F42}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{67B6AA62-F95B-4AC3-9600-671309A91F42}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{67B6AA62-F95B-4AC3-9600-671309A91F42}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7FA89172-4A25-486D-B116-D0AACCD1AEB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7FA89172-4A25-486D-B116-D0AACCD1AEB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7FA89172-4A25-486D-B116-D0AACCD1AEB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7FA89172-4A25-486D-B116-D0AACCD1AEB9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

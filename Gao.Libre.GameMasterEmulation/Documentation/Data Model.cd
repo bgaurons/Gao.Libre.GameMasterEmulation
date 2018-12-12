@@ -29,7 +29,6 @@
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="Occupation" />
-      <Property Name="Culture" />
     </ShowAsAssociation>
   </Class>
   <Class Name="Gao.Libre.GameMasterEmulation.Model.Mission">
@@ -71,13 +70,6 @@
       <Property Name="Type" />
     </ShowAsAssociation>
   </Class>
-  <Enum Name="Gao.Libre.GameMasterEmulation.Model.CultureType" Collapsed="true">
-    <Position X="9.75" Y="10.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AEAAABAAAAAAAAAAAAAAAAAAAAAQABAAAAAAgAAAAAQ=</HashCode>
-      <FileName>Model\CultureType.cs</FileName>
-    </TypeIdentifier>
-  </Enum>
   <Enum Name="Gao.Libre.GameMasterEmulation.Model.ItemType" Collapsed="true">
     <Position X="7" Y="0.75" Width="1.5" />
     <TypeIdentifier>

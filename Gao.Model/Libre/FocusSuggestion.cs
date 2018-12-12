@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Gao.Libre.GameMasterEmulation.Model
+namespace Gao.Model.Libre
 {
     public class FocusSuggestion
     {
         public LocationAndQualityType? WildernessLocation { get; set; }
         public LocationAndQualityType? CivilizedLocation { get; set; }
         public Person Person { get; set; }
-        public ItemType? Item { get; internal set; }
+        public ItemType? Item { get; set; }
 
         public override string ToString()
         {

@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Gao.Libre.GameMasterEmulation.Model
+namespace Gao.Model.Libre
 {
     /// <summary>
     /// Represents a unit of play with a beginning middle and end. it is composed of many scenes.
     /// </summary>
     public class Mission
     {
-        public MissionType Type { get; internal set; }
+        public MissionType Type { get; set; }
 
         public FocusSuggestion Suggestions { get; set; }
         public LocationAndQualityType Purpose { get; set; }

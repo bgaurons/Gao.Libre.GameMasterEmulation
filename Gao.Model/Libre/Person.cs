@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Gao.Libre.GameMasterEmulation.Model
+namespace Gao.Model.Libre
 {
     public class Person
     {
-        public PersonType Type { get; internal set; }
+        public PersonType Type { get; set; }
         public Foe FoeDetails { get; set; }
-        public Trait Personality { get; internal set; }
+        public Trait Personality { get; set; }
 
         public override string ToString()
         {

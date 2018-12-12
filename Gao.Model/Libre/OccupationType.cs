@@ -1,8 +1,9 @@
-﻿using System;
+﻿using Gao.Model.Common;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Gao.Libre.GameMasterEmulation.Model
+namespace Gao.Model.Libre
 {
     /// <summary>
     /// A type of occupation for a character

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Gao.Libre.GameMasterEmulation.Model
+namespace Gao.Model.Libre
 {
     /// <summary>
     /// Tracks variables that change as things progress

@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using Gao.Model.Libre;
 
 namespace Gao.Libre.GameMasterEmulation.Mechanic
 {
