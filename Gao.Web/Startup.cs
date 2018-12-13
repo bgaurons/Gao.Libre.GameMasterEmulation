@@ -1,4 +1,5 @@
 ﻿using Gao.Database;
+using Gao.Database.Model;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -31,10 +32,15 @@ namespace Gao.Web
             });
 
             services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlite(
-                    Configuration.GetConnectionString("Gao.Web")));
-            services.AddIdentity<IdentityUser, IdentityRole>()
-                // services.AddDefaultIdentity<IdentityUser>()
+            {
+            options.UseSqlite
+            (
+                Configuration.GetConnectionString("Gao.Web"),
+                ob => ob.MigrationsAssembly("Gao.Web")
+                );
+                
+            });
+            services.AddIdentity<ApplicationUser, ApplicationRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>()
                 .AddDefaultTokenProviders();
 
