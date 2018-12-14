@@ -17,6 +17,14 @@ namespace Gao.Libre.GameMasterEmulation.Mechanic
             return returnValue;
         }
 
+        public static Mission GenerateSideMission()
+        {
+            var returnValue = new Mission { Type = RandomTable.MissionType };
+            GenerateTargetHints(returnValue.Type, returnValue);
+            returnValue.Purpose = RandomTable.Rationale;
+            return returnValue;
+        }
+
         /// <summary>
         /// The mission type infers possible target hints.
         /// </summary>

@@ -35,52 +35,60 @@ namespace Gao.Libre.GameMasterEmulation.Mechanic
             {
                 case PersonType.WeakTeam:
                     foe.Quantity = Dice.Roll(1, 10).First();
-                    foe.PointValue = 2;
+                    foe.PointValue = Enumerable.Repeat(2, foe.Quantity).ToArray();
                     GenerateCultureAndOccupation(foe);
                     break;
                 case PersonType.AverageTeam:
                     foe.Quantity = Dice.Roll(1, 10).First();
-                    foe.PointValue = 3;
+                    foe.PointValue = Enumerable.Repeat(3, foe.Quantity).ToArray();
                     GenerateCultureAndOccupation(foe);
                     break;
                 case PersonType.AverageNonPlayerCharacter:
                     foe.Quantity = 1;
-                    foe.PointValue = 5;
+                    foe.PointValue = new[] { 5 };
                     GenerateCultureAndOccupation(foe);
                     break;
                 case PersonType.TalentedNonPlayerCharacter:
                 case PersonType.AddLeader:
                     foe.Quantity = 1;
-                    foe.PointValue = 10;
+                    foe.PointValue = new[] { 10 };
                     GenerateCultureAndOccupation(foe);
                     break;
                 case PersonType.AnimalsMounts:
-                case PersonType.WeakMinions:
                 case PersonType.VehiclesMounts:
+                    foe.MinimumQuantity = 1;
+                    foe.MaximumQuantity = Dice.Roll(1, 10).First();
+                    foe.Quantity = (foe.MinimumQuantity.Value + foe.MaximumQuantity.Value)/2;
+                    foe.MinimumPointValue = 2;
+                    foe.PointValue = Enumerable.Repeat(foe.MinimumPointValue.Value, foe.Quantity).ToArray();
+                    break;
+                case PersonType.WeakMinions:
                 case PersonType.WeakMindlessMinion:
                     foe.Quantity = Dice.Roll(1, 10).First();
-                    foe.PointValue = 2;
+                    foe.PointValue = Enumerable.Repeat(2, foe.Quantity).ToArray();
                     break;
                 case PersonType.NonCombatant:
                     var bail = IsFoe(ReplacementFoeCheck(person));
                     if (bail) return;
                     foe.Quantity = 1;
-                    foe.PointValue = 1;
+                    foe.PointValue = new[] { 1 };
                     break;
                 case PersonType.AverageMinions:
                 case PersonType.AverageMindlessMinion:
                     foe.Quantity = Dice.Roll(1, 10).First();
-                    foe.PointValue = 3;
+                    foe.PointValue = Enumerable.Repeat(3, foe.Quantity).ToArray();
                     break;
                 case PersonType.BigBrute:
                 case PersonType.PowerfulEntity:
                 case PersonType.Automaton:
                     foe.Quantity = 1;
-                    foe.PointValue = 10;
+                    foe.PointValue = new[] { 10 };
                     break;
                 case PersonType.HybridsAnimals:
-                    foe.Quantity = Dice.Roll(1, 10).First();
-                    foe.PointValue = 5;
+                    foe.MinimumQuantity = 1;
+                    foe.MaximumQuantity = Dice.Roll(1, 10).First();
+                    foe.Quantity = (foe.MinimumQuantity.Value + foe.MaximumQuantity.Value) / 2;
+                    foe.PointValue = Enumerable.Repeat(5, foe.Quantity).ToArray();
                     break;
                 case PersonType.SpecialAverageNonPlayerCharacter:
                     var newType = ReplacementFoeCheck(person);
@@ -88,7 +96,7 @@ namespace Gao.Libre.GameMasterEmulation.Mechanic
                     GenerateCultureAndOccupation(foe);
                     person.Type = newType;
                     foe.Quantity = 1;
-                    foe.PointValue = 5;
+                    foe.PointValue = new[] { 5 };
                     break;
                 case PersonType.SpecialTalentedNonPlayerCharacter:
                     newType = ReplacementFoeCheck(person);
@@ -96,12 +104,14 @@ namespace Gao.Libre.GameMasterEmulation.Mechanic
                     GenerateCultureAndOccupation(foe);
                     person.Type = newType;
                     foe.Quantity = 1;
-                    foe.PointValue = 10;
+                    foe.PointValue = new[] { 10 };
                     break;
                 case PersonType.Captives:
                     foe.IsCaptive = true;
-                    foe.Quantity = Dice.Roll(1, 10).First();
-                    foe.PointValue = 0;
+                    foe.MinimumQuantity = 1;
+                    foe.MaximumQuantity = Dice.Roll(1, 10).First();
+                    foe.Quantity = (foe.MinimumQuantity.Value + foe.MaximumQuantity.Value) / 2;
+                    foe.PointValue = Enumerable.Repeat(0, foe.Quantity).ToArray();
                     do
                     {
                         newType = RandomTable.PersonType;
@@ -110,7 +120,7 @@ namespace Gao.Libre.GameMasterEmulation.Mechanic
                     break;
                 case PersonType.InfiltratorSpy:
                     foe.Quantity = 1;
-                    foe.PointValue = 15;
+                    foe.PointValue = new[] { 15 };
                     break;
                 default:
                     throw new ArgumentOutOfRangeException(nameof(type));

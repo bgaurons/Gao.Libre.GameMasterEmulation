@@ -6,6 +6,9 @@ namespace Gao.Model.Libre
 {
     public class Person
     {
+        public long Id { get; set; }
+        public string Name { get; set; }
+        public Comment Comment { get; set; }
         public PersonType Type { get; set; }
         public Foe FoeDetails { get; set; }
         public Trait Personality { get; set; }

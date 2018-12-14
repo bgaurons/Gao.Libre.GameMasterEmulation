@@ -28,20 +28,23 @@ namespace Gao.Libre.GameMasterEmulation.Mechanic
                 ((TEnum[])Enum.GetValues(type)).
                 SelectMany(e => 
                 {
+                    var returnValue = new List<KeyValuePair<int, TEnum>>();
+                    
                     var name = Enum.GetName(type, e);
-                    var additionalEntries = type.GetField(name).GetCustomAttribute<RepeatElementAttribute>();
-                    var returnValue = new List<KeyValuePair<int, TEnum>>
+                    var skip = type.GetField(name).GetCustomAttribute<ExcludeElementAttribute>();
+                    if (skip == null) //return an empty list if we need to skip, otherwise populate the list.
                     {
-                        new KeyValuePair<int, TEnum>(e.ToInt32(CultureInfo.InvariantCulture), e)
-                    };
-                    if(additionalEntries != null)
-                    {
-                        returnValue.AddRange
-                        (
-                            additionalEntries.
-                            OtherIndices.
-                            Select(i => new KeyValuePair<int, TEnum>(i, e))
-                        );
+                        returnValue.Add(new KeyValuePair<int, TEnum>(e.ToInt32(CultureInfo.InvariantCulture), e));
+                        var additionalEntries = type.GetField(name).GetCustomAttribute<RepeatElementAttribute>();
+                        if (additionalEntries != null)
+                        {
+                            returnValue.AddRange
+                            (
+                                additionalEntries.
+                                OtherIndices.
+                                Select(i => new KeyValuePair<int, TEnum>(i, e))
+                            );
+                        }
                     }
                     return returnValue;
                     

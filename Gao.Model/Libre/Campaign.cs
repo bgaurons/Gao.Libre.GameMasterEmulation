@@ -12,6 +12,9 @@ namespace Gao.Model.Libre
         public long OwnerId { get; set; }
         public long Id { get; set; }
 
+        public string Name { get; set; }
+        public Comment Comment { get; set; }
+
         public ICollection<Mission> Missions { get; set; } = new List<Mission>();
 
         public ICollection<Person> Characters { get; set; } = new List<Person>();

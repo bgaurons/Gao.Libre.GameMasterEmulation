@@ -6,6 +6,8 @@ namespace Gao.Model.Libre
 {
     public class FocusSuggestion
     {
+        public long Id { get; set; }
+        public Comment Comment { get; set; }
         public LocationAndQualityType? WildernessLocation { get; set; }
         public LocationAndQualityType? CivilizedLocation { get; set; }
         public Person Person { get; set; }

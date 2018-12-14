@@ -9,7 +9,14 @@ namespace Gao.Model.Libre
     /// </summary>
     public class Scene
     {
+        public long Id { get; set; }
+        public string Name { get; set; }
+        public Comment Comment { get; set; }
         public SceneType Type { get; set; }
+        public int PlotStress { get; set; }
+        public int AskingForTrouble { get; set; }
+        public bool Complete { get; set; }
+        public bool MeaningfulSuccess { get; set; }
         public override string ToString()
         {
             return $"Type - {Type}";

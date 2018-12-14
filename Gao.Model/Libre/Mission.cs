@@ -10,6 +10,8 @@ namespace Gao.Model.Libre
     public class Mission
     {
         public long Id { get; set; }
+        public string Name { get; set; }
+        public Comment Comment { get; set; }
         public MissionType Type { get; set; }
 
         public FocusSuggestion Suggestions { get; set; }
@@ -17,11 +19,13 @@ namespace Gao.Model.Libre
         /// <summary>
         /// The number of good things someone needs to resolve to call the mission a success
         /// </summary>
-        public int MeaningfulSuccessesToResolve { get; set; }
+        public int MeaningfulSuccessesToResolve { get; set; } = 2;
 
         public ICollection<Person> PatronsPersons { get; } = new List<Person>();
 
         public ICollection<Person> AlliesGroups { get; } = new List<Person>();
+
+        public ICollection<Mission> SideMissions { get; } = new List<Mission>();
 
         public ICollection<Scene> Scenes { get; } = new List<Scene>();
 
